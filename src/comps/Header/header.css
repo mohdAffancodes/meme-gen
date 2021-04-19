@@ -1,0 +1,44 @@
+header {
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #6441a5; /* fallback for old browsers */
+   background: -webkit-linear-gradient(
+      to right,
+      #2a0845,
+      #6441a5
+   ); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(
+      to right,
+      #2a0845,
+      #6441a5
+   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header > img {
+   height: 80%;
+   margin-left: 0;
+}
+
+header > p {
+   font-family: monospace;
+   color: whitesmoke;
+   font-size: 50px;
+   margin-left: 10px;
+}
+
+/*Media queries*/
+@media only screen and (max-width: 600px) {
+   header > p {
+      font-size: 40px;
+   }
+   header > img {
+      height: 60%;
+   }
+}
+@media only screen and (max-width: 400px) {
+   header > p {
+      font-size: 30px;
+   }
+}

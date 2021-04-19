@@ -2,7 +2,7 @@
   "name": "meme-gen",
   "homepage": "http://mohdAffancodes.github.io/meme-gen",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",

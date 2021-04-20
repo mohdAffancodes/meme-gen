@@ -26,14 +26,15 @@ function MemeGenerator() {
    const handleSubmit = (e) => {
       e.preventDefault();
       const randNum = Math.floor(Math.random() * allMemes.length);
-      const randomMemeImg = allMemes[randNum].url;
       //.setting the meme img
-      setMeme(randomMemeImg);
+      setMeme(allMemes[randNum].url);
       let loadImg = document.getElementById("load");
       loadImg.onload = () => {
          setLoading(false);
-         document.querySelector(".meme").style.height =
-            loadImg.offsetHeight + "px";
+         setInterval(() => {
+            document.querySelector(".meme").style.height =
+               loadImg.offsetHeight + "px";
+         }, 1000);
       };
    };
 
@@ -57,7 +58,6 @@ function MemeGenerator() {
 
    function downloadURL(url, name) {
       let link = document.createElement("a");
-
       link.download = name;
       link.href = url;
       document.body.appendChild(link);
@@ -85,7 +85,6 @@ function MemeGenerator() {
                   value={bottomText}
                   onChange={(e) => setBottomText(e.target.value)}
                />
-
                <button>Gen</button>
             </form>
          )}

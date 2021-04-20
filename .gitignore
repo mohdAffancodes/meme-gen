@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/favicons
 
 # misc
 .DS_Store

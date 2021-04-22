@@ -31,10 +31,8 @@ function MemeGenerator() {
       let loadImg = document.getElementById("load");
       loadImg.onload = () => {
          setLoading(false);
-         setInterval(() => {
             document.querySelector(".meme").style.height =
                loadImg.offsetHeight + "px";
-         }, 1000);
       };
    };
 
